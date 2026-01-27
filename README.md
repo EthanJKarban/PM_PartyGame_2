@@ -1,3 +1,7 @@
+#Pitch Deck
+
+Refer to the Pitch Deck if you're confused about any aspect of the game or contact Ethan or Taylor.
+
 # 2D-Template
 
 The following is a template you can use when creating a 2D project in class. If working with team members, you must share your new repository with them so they can work on it.
