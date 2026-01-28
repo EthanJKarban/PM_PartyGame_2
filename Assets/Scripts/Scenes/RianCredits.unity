@@ -241,7 +241,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 916071202}
-        m_TargetAssemblyTypeName: EthanCredits, Assembly-CSharp
+        m_TargetAssemblyTypeName: DavidCredits, Assembly-CSharp
         m_MethodName: OnArrowButtonClick
         m_Mode: 1
         m_Arguments:
@@ -261,7 +261,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 916071197}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dd304dbf951ec5743a76fd0b596281cb, type: 3}
+  m_Script: {fileID: 11500000, guid: 55842cb52454e4c4f81f0d3d8e221f74, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &990697666

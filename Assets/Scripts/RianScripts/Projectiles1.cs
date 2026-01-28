@@ -28,11 +28,18 @@ public class Projectiles1 : MonoBehaviour
       
         if (collision.gameObject.CompareTag("Ground"))
         {
-            Debug.Log("i died");
+           
+            Destroy(gameObject);
+        }
+
+        if (collision.gameObject.CompareTag("Player"))
+        {
+
             Destroy(gameObject);
         }
 
 
     }
+
 }
 
