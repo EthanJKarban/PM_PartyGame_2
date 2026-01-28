@@ -151,7 +151,7 @@ MonoBehaviour:
   _jumpForce: 8
   _groundLayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 8
 --- !u!70 &6237095401256842716
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
