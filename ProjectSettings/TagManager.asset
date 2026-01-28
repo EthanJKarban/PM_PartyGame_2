@@ -8,14 +8,10 @@ TagManager:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - Platform
+  - 
   - Water
   - UI
-<<<<<<< HEAD
-  - Death
-=======
-  - Ground
->>>>>>> 46a7bb87d34fba9f5c08f6dcb4661700a967f488
+  - 
   - 
   - 
   - 

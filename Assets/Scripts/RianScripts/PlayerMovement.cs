@@ -77,7 +77,7 @@ public class Player : MonoBehaviour
 
     void FixedUpdate()
     {
-        rb.linearVelocityX = movementInput.x;
+        rb.linearVelocityX = (movementInput.x * speed);
 
         // Apply velocity in the FixedUpdate for consistent physics interactions (FixedUpdate is called at a fixed interval)
         if (jumped)
