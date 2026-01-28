@@ -9,7 +9,7 @@ public class Projectiles1 : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        Destroy(gameObject, 5f);
+        Destroy(gameObject, 2f);
     }
 
     // Update is called once per frame
@@ -25,13 +25,21 @@ public class Projectiles1 : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Enemy"))
+      
+        if (collision.gameObject.CompareTag("Ground"))
         {
-            Debug.Log("yeouch");
+           
+            Destroy(gameObject);
+        }
+
+        if (collision.gameObject.CompareTag("Player"))
+        {
+
             Destroy(gameObject);
         }
 
 
     }
+
 }
 
