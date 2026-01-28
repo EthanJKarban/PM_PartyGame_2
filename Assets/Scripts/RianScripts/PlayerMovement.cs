@@ -40,7 +40,7 @@ public class Player : MonoBehaviour
     public void Move(InputAction.CallbackContext ctx)
     {
         movementInput = ctx.ReadValue<Vector2>();
-        Debug.Log("talyor ewww");
+        
     }
     public bool IsGrounded()
     {
@@ -87,7 +87,7 @@ public class Player : MonoBehaviour
         }
     }
 
-    public void Aim(InputAction.CallbackContext context)
+    public void AimGampePad(InputAction.CallbackContext context)
     {
         if (context.ReadValue<Vector2>() != Vector2.zero)
         {
@@ -96,6 +96,11 @@ public class Player : MonoBehaviour
 
     }
 
+    public void AimMouse(InputAction.CallbackContext context)
+    {
+        Vector2 mousepos = Camera.main.ScreenToWorldPoint(context.ReadValue<Vector2>());
+        gun.transform.right = mousepos - (Vector2)gun.transform.position;
+    }
 
     public void Shoot(InputAction.CallbackContext context)
     {
