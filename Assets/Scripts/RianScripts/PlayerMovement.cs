@@ -9,7 +9,7 @@ public class Player : MonoBehaviour
     [SerializeField] private float damage;
     [SerializeField] private GameObject gun;
 
-   
+    public float weight;
 
     [SerializeField] private Animator anim;
 
@@ -77,7 +77,7 @@ public class Player : MonoBehaviour
 
     void FixedUpdate()
     {
-        rb.linearVelocityX = (movementInput.x * speed);
+        rb.linearVelocityX = Mathf.Lerp(rb.linearVelocityX, (movementInput.x * speed), weight);
 
         // Apply velocity in the FixedUpdate for consistent physics interactions (FixedUpdate is called at a fixed interval)
         if (jumped)

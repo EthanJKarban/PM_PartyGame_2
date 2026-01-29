@@ -3,7 +3,7 @@ using UnityEngine.SceneManagement;
 
 public class GameLoading : MonoBehaviour
 {
-    public float delayBeforeLoad = 8f;
+    public float delayBeforeLoad = 5f;
 
     void Start()
     {
