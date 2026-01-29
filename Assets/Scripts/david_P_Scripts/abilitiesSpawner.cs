@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class abilitiesSpawner : MonoBehaviour
 {
+    public scriptableAbilities[] abilityTypes;
     [HideInInspector] public float xpos;
     [HideInInspector] public float ypos;
     public float totalAbilities;
@@ -16,7 +17,7 @@ public class abilitiesSpawner : MonoBehaviour
 
     private void Start()
     {
-        List listAbilities = new List();
+        var abilityTypes = FindObjectsByType<abilitiesSpawner>(FindObjectsSortMode.None);
         StartCoroutine(spawnNewAbility());
     }
 
