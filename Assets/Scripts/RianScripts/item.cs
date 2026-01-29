@@ -12,7 +12,7 @@ public class item : ScriptableObject
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            Destroy(this.GameObject);
+           // Destroy(this.gameObject);
         }
     }
 }
