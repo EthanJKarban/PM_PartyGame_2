@@ -4,7 +4,7 @@ using UnityEngine;
 public class PowerUps : MonoBehaviour
 {
     public PU powerUp;
-    public PS playerStats;
+    //public PS playerStats;
     public Player Playa;
     public GameObject pickupEffect;
     private void OnTriggerEnter2D(Collider2D other)
@@ -41,7 +41,7 @@ public class PowerUps : MonoBehaviour
         if(powerUp.speedMultiplier != 1)
         {
             powerUp.speedMultiplier = 1;
-            playerStats.speed = 5f;
+            //playerStats.speed = 5f;
         }
         if(Playa.speed != 5f)
         {

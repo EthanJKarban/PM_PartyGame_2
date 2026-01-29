@@ -23,7 +23,7 @@ public class Spawner : MonoBehaviour
 
         if(spawnInterval > 3)
         {
-            Instantiate(prefabstoSpawn, range, Quaternion.identity);
+            Debug.Log("Spawned");
             spawnInterval = 0;
             GameObject spawnedObject = Instantiate(prefabstoSpawn, range, Quaternion.identity);
             spawnedObject.GetComponent<Rigidbody2D>().AddForce(downwardForce * 5, ForceMode2D.Impulse);
