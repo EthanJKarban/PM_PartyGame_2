@@ -1,8 +1,6 @@
-using System;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
-
+using System.Collections;
 public class Player : MonoBehaviour
 {
     [SerializeField] private Rigidbody2D rb;
@@ -22,9 +20,11 @@ public class Player : MonoBehaviour
     public GameObject projectilePrefab;
     public Camera mainCamera;
 
+    [SerializeField] float reloadTimer = 0.5f;
+
     [SerializeField] private GameObject spawn;
 
-
+    public bool reloaded = true;
 
     [SerializeField] private float _jumpForce = 15f;
     private bool jumped = false;
@@ -66,15 +66,7 @@ public class Player : MonoBehaviour
         Gizmos.DrawWireCube(transform.position + offset + Vector3.down * castDistance, boxsize);
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.tag == "Enemy")
-        {
-            //other.GetComponent<Enemy>().TakeDamage(damage);
-            Debug.Log("Enemy hit!");
-        }
-    }
-
+    
     void FixedUpdate()
     {
         rb.linearVelocityX = Mathf.Lerp(rb.linearVelocityX, (movementInput.x * speed), weight);
@@ -104,20 +96,30 @@ public class Player : MonoBehaviour
 
     public void Shoot(InputAction.CallbackContext context)
     {
-        if (context.performed)
+       
+        if (context.performed && reloaded)
         {
             GameObject proj = Instantiate(projectilePrefab, spawn.transform.position, Quaternion.identity);
             proj.transform.right = gun.transform.right;
+            reloaded = false;
+            StartCoroutine(GunCooldown(this));
+            
         }
     }
-
-    internal void TakeDamage(int contactDamage)
+    IEnumerator GunCooldown(Player player)
     {
-        throw new NotImplementedException();
+        yield return new WaitForSeconds(reloadTimer);
+        
+        reloaded = true;
+    }
+    internal void TakeKnockback(int knockback)
+    {
+       //adds one knockback to the player in the inspector
+       
     }
     public void Jump(InputAction.CallbackContext ctx)
     {
-        if (ctx.ReadValue<float>() == 1)
+        if (ctx.ReadValue<float>() == 1 && weight>=1)
         {
             if (IsGrounded())
             {

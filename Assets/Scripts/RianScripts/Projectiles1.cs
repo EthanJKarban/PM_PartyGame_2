@@ -1,4 +1,5 @@
 using JetBrains.Annotations;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.Rendering;
 
@@ -10,7 +11,7 @@ public class Projectiles1 : MonoBehaviour
     public float knockback;
     public float speed;
     public float lifetime;
-
+    public float knockbackTime;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -23,7 +24,7 @@ public class Projectiles1 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     private void FixedUpdate()
@@ -33,10 +34,10 @@ public class Projectiles1 : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-      
+
         if (collision.gameObject.CompareTag("Ground"))
         {
-           
+
             Destroy(gameObject);
         }
 
@@ -44,8 +45,12 @@ public class Projectiles1 : MonoBehaviour
         {
 
             Destroy(gameObject);
-            Knockback();
+            Knockback(collision);
         }
+    }
+
+    void Knockback(Collider2D collision)
+    {
 
         Vector3 point = collision.ClosestPoint(transform.position);
         Vector2 difference = (transform.position - point).normalized;
@@ -54,11 +59,24 @@ public class Projectiles1 : MonoBehaviour
 
         collision.attachedRigidbody.linearVelocity = launchangle;
 
+        if (collision.TryGetComponent(out Player player))
+        {
+            player.StartCoroutine(adjustWeight(player));
+        }
     }
 
-        void Knockback()
+    IEnumerator adjustWeight(Player player)
     {
+        player.weight = 0;
 
+        for (float i = 0; i < knockbackTime; i+=Time.deltaTime)
+        {
+            player.weight = i / knockbackTime;
+            yield return new WaitForEndOfFrame ();
+        }
+
+        player.weight = 1;
+       
     }
 }
 
