@@ -1,18 +1,17 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
-<<<<<<< HEAD
+
 using System.Collections;
-public class Player : MonoBehaviour
-=======
+
 
 public class PlayerMovement : MonoBehaviour
->>>>>>> d974a2946d6239ddea41a6c9e35027ffa791cb7c
+
 {
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private float damage;
     [SerializeField] private GameObject gun;
 
-    public float weight;
+    public float weight = 1;
 
     [SerializeField] private Animator anim;
 
@@ -107,11 +106,11 @@ public class PlayerMovement : MonoBehaviour
             GameObject proj = Instantiate(projectilePrefab, spawn.transform.position, Quaternion.identity);
             proj.transform.right = gun.transform.right;
             reloaded = false;
-            StartCoroutine(GunCooldown(this));
+            StartCoroutine(GunCooldown());
             
         }
     }
-    IEnumerator GunCooldown(Player player)
+    IEnumerator GunCooldown()
     {
         yield return new WaitForSeconds(reloadTimer);
         
@@ -122,6 +121,9 @@ public class PlayerMovement : MonoBehaviour
        //adds one knockback to the player in the inspector
        
     }
+
+
+
     public void Jump(InputAction.CallbackContext ctx)
     {
         if (ctx.ReadValue<float>() == 1 && weight>=1)
