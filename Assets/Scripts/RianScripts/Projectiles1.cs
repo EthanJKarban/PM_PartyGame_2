@@ -1,5 +1,6 @@
 using JetBrains.Annotations;
 using System.Collections;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Rendering;
 
@@ -45,7 +46,7 @@ public class Projectiles1 : MonoBehaviour
 
         if (collision.gameObject.CompareTag("Player"))
         {
-
+            knockback -= 3;
             Destroy(gameObject);
             Knockback(collision);
         }
@@ -59,7 +60,10 @@ public class Projectiles1 : MonoBehaviour
 
         Vector2 launchangle = difference * knockback;
 
+
+
         collision.attachedRigidbody.linearVelocity = launchangle;
+        
 
         if (collision.TryGetComponent(out PlayerMovement player))
         {

@@ -306,7 +306,7 @@ MonoBehaviour:
   LateralAdjustment: 0
   FovRange: {x: 1, y: 100}
   DollyRange: {x: -100, y: 100}
-  OrthoSizeRange: {x: 1, y: 1000}
+  OrthoSizeRange: {x: 4.17, y: 102}
 --- !u!114 &531369309
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -562,7 +562,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 1
+  orthographic size: 4.17
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
