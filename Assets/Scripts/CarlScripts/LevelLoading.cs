@@ -12,6 +12,6 @@ public class LevelLoading : MonoBehaviour
 
     private void LoadNextScene()
     {
-        SceneManager.LoadScene("Rian test");
+        SceneManager.LoadScene("");
     }
 }
