@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class abilitiesSpawner : MonoBehaviour
 {
-    public scriptableAbilities[] abilityTypes;
+    
     [HideInInspector] public float xpos;
     [HideInInspector] public float ypos;
     public float totalAbilities;
