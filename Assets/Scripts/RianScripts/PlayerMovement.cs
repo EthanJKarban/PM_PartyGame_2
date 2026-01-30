@@ -1,7 +1,12 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+<<<<<<< HEAD
 using System.Collections;
 public class Player : MonoBehaviour
+=======
+
+public class PlayerMovement : MonoBehaviour
+>>>>>>> d974a2946d6239ddea41a6c9e35027ffa791cb7c
 {
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private float damage;
