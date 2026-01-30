@@ -46,7 +46,6 @@ GameObject:
   - component: {fileID: 6237095401256842716}
   - component: {fileID: 3440927217281633222}
   - component: {fileID: 7372015604604808226}
-  - component: {fileID: -8461255605506385820}
   m_Layer: 0
   m_Name: plauer
   m_TagString: Player
@@ -140,11 +139,7 @@ MonoBehaviour:
   rb: {fileID: 3440927217281633222}
   damage: 0
   gun: {fileID: 1583528614470893088}
-<<<<<<< HEAD
   weight: 1
-=======
-  weight: 0
->>>>>>> d974a2946d6239ddea41a6c9e35027ffa791cb7c
   anim: {fileID: 0}
   speed: 6.7
   offset: {x: 0, y: -0.98, z: 0}
@@ -394,28 +389,6 @@ MonoBehaviour:
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
---- !u!95 &-8461255605506385820
-Animator:
-  serializedVersion: 7
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1881429271599465133}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: d8980d815e90a6c41aebb944589793d3, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_AnimatePhysics: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &2560692143884638367
 GameObject:
   m_ObjectHideFlags: 0

@@ -12,6 +12,8 @@ public class Projectiles1 : MonoBehaviour
     public float speed;
     public float lifetime;
     public float knockbackTime;
+
+    
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -59,13 +61,13 @@ public class Projectiles1 : MonoBehaviour
 
         collision.attachedRigidbody.linearVelocity = launchangle;
 
-        if (collision.TryGetComponent(out Player player))
+        if (collision.TryGetComponent(out PlayerMovement player))
         {
             player.StartCoroutine(adjustWeight(player));
         }
     }
 
-    IEnumerator adjustWeight(Player player)
+    IEnumerator adjustWeight(PlayerMovement player)
     {
         player.weight = 0;
 
