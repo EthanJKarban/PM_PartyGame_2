@@ -5,7 +5,7 @@ public class Start : MonoBehaviour
 {
     public void OnStartButtonClick()
     {
-        SceneManager.LoadScene("LevelLoading");
+        SceneManager.LoadScene("LevelSelect");
     }
 
 }
