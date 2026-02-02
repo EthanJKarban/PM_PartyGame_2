@@ -47,6 +47,7 @@ GameObject:
   - component: {fileID: 7372015604604808226}
   - component: {fileID: 4621775149880509322}
   - component: {fileID: 3918310698519861769}
+  - component: {fileID: 6408089813993471969}
   m_Layer: 0
   m_Name: plauer
   m_TagString: Player
@@ -143,16 +144,17 @@ MonoBehaviour:
   weight: 1
   anim: {fileID: 0}
   speed: 6.7
-  offset: {x: 0, y: -0.98, z: 0}
-  boxsize: {x: 1.1, y: 0.16}
+  offset: {x: 0, y: -0.67, z: 0}
+  boxsize: {x: 0.72, y: 0.05}
   castDistance: 0
   HasDoubleJump: 1
   projectilePrefab: {fileID: 1370411557751180021, guid: b0a9f9c834b99004cb5015548c2c2479, type: 3}
   mainCamera: {fileID: 0}
+  health: 0
   reloadTimer: 0.5
   spawn: {fileID: 7725585988557925610}
   reloaded: 1
-  _jumpForce: 8
+  _jumpForce: 15
   _groundLayer:
     serializedVersion: 2
     m_Bits: 8
@@ -171,7 +173,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDamping: 0.05
   m_AngularDamping: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 5.1
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -181,7 +183,7 @@ Rigidbody2D:
     m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!114 &7372015604604808226
 MonoBehaviour:
@@ -421,6 +423,22 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.6666667, y: 1.3333334}
   m_EdgeRadius: 0
+--- !u!111 &6408089813993471969
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1881429271599465133}
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Animation: {fileID: 7400000, guid: e2e31a4af75ea684cb99d2ab2cfad61d, type: 2}
+  m_Animations: []
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_UpdateMode: 0
+  m_CullingType: 0
 --- !u!1 &2560692143884638367
 GameObject:
   m_ObjectHideFlags: 0
@@ -448,8 +466,8 @@ Transform:
   m_GameObject: {fileID: 2560692143884638367}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.502, y: 0.24, z: 0}
-  m_LocalScale: {x: 0.86898386, y: 0.24418041, z: 1}
+  m_LocalPosition: {x: 0.9764, y: 0.1551, z: 0}
+  m_LocalScale: {x: 0.67800725, y: 0.15141702, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8210547564276366149}
