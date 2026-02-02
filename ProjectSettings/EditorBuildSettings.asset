@@ -9,46 +9,46 @@ EditorBuildSettings:
     path: Assets/Scenes/SampleScene.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
   - enabled: 1
-    path: Assets/Scripts/Scenes/GameLoading.unity
+    path: Assets/Scripts/CarlScenes/GameLoading.unity
     guid: 96f0ae360ba925840b4fb59e5075d686
   - enabled: 1
-    path: Assets/Scripts/Scenes/Credits.unity
+    path: Assets/Scripts/CarlScenes/Credits.unity
     guid: 3b96fd8e8d38a1b4d87db360c9a727c2
   - enabled: 1
-    path: Assets/Scripts/Scenes/Quit.unity
+    path: Assets/Scripts/CarlScenes/Quit.unity
     guid: 9da73568e41ae5b4e8013504db4b7140
   - enabled: 1
-    path: Assets/Scripts/Scenes/MainMenu.unity
+    path: Assets/Scripts/CarlScenes/MainMenu.unity
     guid: 866e5f1941b13684a8c5d850c5df95b0
   - enabled: 1
-    path: Assets/Scripts/Scenes/Settings.unity
+    path: Assets/Scripts/CarlScenes/Settings.unity
     guid: cfde65d57d5d1dd49882ccf80548925a
   - enabled: 1
-    path: Assets/Scripts/Scenes/Tutorial.unity
+    path: Assets/Scripts/CarlScenes/Tutorial.unity
     guid: 01604eddd817f354bb60c5d393945659
   - enabled: 1
-    path: Assets/Scripts/Scenes/LevelLoading.unity
+    path: Assets/Scripts/CarlScenes/LevelLoading.unity
     guid: 977f061ece653eb4bb0c5d758f236b07
   - enabled: 1
-    path: Assets/Scripts/Scenes/TaylorCredits.unity
+    path: Assets/Scripts/CarlScenes/TaylorCredits.unity
     guid: ee062c1ef164a8a48ad2786498d67fa9
   - enabled: 1
-    path: Assets/Scripts/Scenes/DeklinCredits.unity
+    path: Assets/Scripts/CarlScenes/DeklinCredits.unity
     guid: b8db2de041830c146a422ec39c36ff64
   - enabled: 1
-    path: Assets/Scripts/Scenes/CarlCredits.unity
+    path: Assets/Scripts/CarlScenes/CarlCredits.unity
     guid: 81cf304f6e96c694e815ef881513927d
   - enabled: 1
-    path: Assets/Scripts/Scenes/EthanCredits.unity
+    path: Assets/Scripts/CarlScenes/EthanCredits.unity
     guid: 8ce5b0e11cd9bd7428431c511732d423
   - enabled: 1
-    path: Assets/Scripts/Scenes/RianCredits.unity
+    path: Assets/Scripts/CarlScenes/RianCredits.unity
     guid: 2a7783f3d5812df42b046fbf3e410875
   - enabled: 1
-    path: Assets/Scripts/Scenes/DavidPACredits.unity
+    path: Assets/Scripts/CarlScenes/DavidPACredits.unity
     guid: d9c9af26393ccbb46a43304838f9a6d3
   - enabled: 1
-    path: Assets/Scripts/Scenes/DavidWCredits.unity
+    path: Assets/Scripts/CarlScenes/DavidWCredits.unity
     guid: 9062096796c6c7647bee0b25ded8029a
   - enabled: 1
     path: Assets/Scenes/Rian test.unity

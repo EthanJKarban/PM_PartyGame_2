@@ -9,7 +9,7 @@ public class Projectiles1 : MonoBehaviour
     private Collider2D col;
     private Rigidbody2D rb;
 
-    public float knockback;
+    public static float knockback;
     public float speed;
     public float lifetime;
     public float knockbackTime;
@@ -47,6 +47,7 @@ public class Projectiles1 : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             knockback -= 3;
+            Debug.Log($"Knockback: {knockback}");
             Destroy(gameObject);
             Knockback(collision);
         }
