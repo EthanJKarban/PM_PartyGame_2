@@ -9,7 +9,7 @@ public class Projectiles1 : MonoBehaviour
     private Collider2D col;
     private Rigidbody2D rb;
 
-    public static float knockback;
+    public float knockback;
     public float speed;
     public float lifetime;
     public float knockbackTime;
@@ -46,15 +46,18 @@ public class Projectiles1 : MonoBehaviour
 
         if (collision.gameObject.CompareTag("Player"))
         {
-            knockback -= 3;
-            Debug.Log($"Knockback: {knockback}");
             Destroy(gameObject);
+            PlayerMovement playerMovement = collision.gameObject.GetComponent<PlayerMovement>();
+            playerMovement.health += 2;
+            knockback -= playerMovement.health;
             Knockback(collision);
+            Debug.Log($"Knockback: {knockback} --- Health: {playerMovement.health}");
         }
     }
 
     void Knockback(Collider2D collision)
     {
+        
 
         Vector3 point = collision.ClosestPoint(transform.position);
         Vector2 difference = (transform.position - point).normalized;

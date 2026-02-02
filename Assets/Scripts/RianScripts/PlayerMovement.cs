@@ -13,8 +13,6 @@ public class PlayerMovement : MonoBehaviour
 
     public float weight = 1;
 
-    [SerializeField] private Animator anim;
-
     public float speed = 5f;
     public Vector3 offset;
     public Vector2 boxsize;
@@ -23,6 +21,7 @@ public class PlayerMovement : MonoBehaviour
     public bool HasDoubleJump = true;
     public GameObject projectilePrefab;
     public Camera mainCamera;
+    public int health = 0;
 
     [SerializeField] float reloadTimer = 0.5f;
 
