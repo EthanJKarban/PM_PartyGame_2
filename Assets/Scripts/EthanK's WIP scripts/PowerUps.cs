@@ -46,14 +46,10 @@ public class PowerUps : MonoBehaviour
         yield return new WaitForSeconds(powerUp.buffDuration);
 
         //When this wait for seconds ends the buff will end here 
-        if(powerUp.speedMultiplier != 1)
+
+        if(Playa.speed >= powerUp.maxSpeed)
         {
-            Playa.speed /= powerUp.speedMultiplier;
-            //playerStats.speed = 5f;
-        }
-        if(Playa.speed != 5f)
-        {
-            Playa.speed = 5f;
+            Playa.speed = powerUp.maxSpeed;
         }
         //if(powerUp.powerMultiplier != 1)
         //{

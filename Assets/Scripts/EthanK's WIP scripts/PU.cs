@@ -15,6 +15,9 @@ public class PU : ScriptableObject
     [SerializeField] public bool isABuff = true;
     [SerializeField] public bool isAHeal;
     [SerializeField] public bool isAAbility;
+    [SerializeField] public float maxSpeed = 13.4f;
+    [SerializeField] public float maxReloadTimer;
+    
 
 
 
