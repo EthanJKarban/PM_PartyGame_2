@@ -5,7 +5,7 @@ public class Level1 : MonoBehaviour
 {
     public void OnLV1ButtonClick()
     {
-        SceneManager.LoadScene("Level1");
+        SceneManager.LoadScene("Map 1");
     }
 
 }
