@@ -5,6 +5,8 @@ public class OutOfBounds : MonoBehaviour
 
     public PlayerMovement _player;
 
+
+
     private void Start()
     {
         

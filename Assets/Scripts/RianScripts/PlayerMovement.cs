@@ -10,6 +10,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private float damage;
     [SerializeField] private GameObject gun;
+    [SerializeField] public bool isDead = false;
 
     public float weight = 1;
 
@@ -41,7 +42,6 @@ public class PlayerMovement : MonoBehaviour
 
     public void Move(InputAction.CallbackContext ctx)
     {
-        Debug.Log("moving");
         movementInput = ctx.ReadValue<Vector2>(); 
     }
     public bool IsGrounded()
