@@ -30,7 +30,9 @@ public class PowerUps : MonoBehaviour
         if(powerUp.isABuff == true)
         {
           Playa.speed *= powerUp.speedMultiplier;
-          //Playa.damage *= powerUp.powerMultiplier;
+          Playa.reloadTimer /= powerUp.ReloadcooldownMultiplier;
+          Playa._jumpForce *= powerUp.jumpForceMultiplier;
+            //Playa.damage *= powerUp.powerMultiplier;
 
         }
         if(powerUp.isAHeal == true)
@@ -46,14 +48,18 @@ public class PowerUps : MonoBehaviour
         yield return new WaitForSeconds(powerUp.buffDuration);
 
         //When this wait for seconds ends the buff will end here 
-        if(powerUp.speedMultiplier != 1)
+
+        if(Playa.speed >= powerUp.maxSpeed)
         {
-            Playa.speed /= powerUp.speedMultiplier;
-            //playerStats.speed = 5f;
+            Playa.speed = powerUp.maxSpeed;
         }
-        if(Playa.speed != 5f)
+        if(Playa.reloadTimer >= powerUp.maxReloadTimer)
         {
-            Playa.speed = 5f;
+          Playa.reloadTimer = powerUp.maxReloadTimer;
+        }
+        if(Playa._jumpForce >= powerUp.maxJumpForce)
+        {
+            Playa._jumpForce = powerUp.maxJumpForce;
         }
         //if(powerUp.powerMultiplier != 1)
         //{
