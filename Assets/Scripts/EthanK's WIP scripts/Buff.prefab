@@ -49,6 +49,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 351c72d208250db4e852f99d66e0e977, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  selfDestroyTime: 10
+  countdown: 0
   powerUp: {fileID: 11400000, guid: 2402b09f17eb22b4b8259f207e9ed289, type: 2}
   Playa: {fileID: 0}
   pickupEffect: {fileID: 0}
@@ -169,8 +171,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 222537989714955352, guid: d947db99aec12104794dd8f5a9c419e4, type: 3}
-  m_Color: {r: 1, g: 0.86490077, b: 0.4009434, a: 1}
+  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+  m_Color: {r: 1, g: 0.7777778, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
