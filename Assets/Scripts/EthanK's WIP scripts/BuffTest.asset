@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d8048f1a7eea5d4faf18f65f70e366e, type: 3}
   m_Name: BuffTest
   m_EditorClassIdentifier: 
-  buffDuration: 3
-  speedMultiplier: 2
+  buffDuration: 1
+  speedMultiplier: 1.2
   powerMultiplier: 1
   defenseMultiplier: 1
   cooldownMultiplier: 0
@@ -21,3 +21,5 @@ MonoBehaviour:
   isABuff: 1
   isAHeal: 0
   isAAbility: 0
+  maxSpeed: 13.4
+  maxReloadTimer: 0
