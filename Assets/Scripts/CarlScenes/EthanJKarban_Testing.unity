@@ -473,6 +473,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: plauer
       objectReference: {fileID: 0}
+    - target: {fileID: 7670032879322732323, guid: 89f94b2102e7edb41817007a5c7f2db5, type: 3}
+      propertyPath: mainCamera
+      value: 
+      objectReference: {fileID: 1328505604}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

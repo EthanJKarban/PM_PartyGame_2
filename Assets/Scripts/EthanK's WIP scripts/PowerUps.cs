@@ -30,7 +30,9 @@ public class PowerUps : MonoBehaviour
         if(powerUp.isABuff == true)
         {
           Playa.speed *= powerUp.speedMultiplier;
-          //Playa.damage *= powerUp.powerMultiplier;
+          Playa.reloadTimer /= powerUp.ReloadcooldownMultiplier;
+          Playa._jumpForce *= powerUp.jumpForceMultiplier;
+            //Playa.damage *= powerUp.powerMultiplier;
 
         }
         if(powerUp.isAHeal == true)
@@ -50,6 +52,14 @@ public class PowerUps : MonoBehaviour
         if(Playa.speed >= powerUp.maxSpeed)
         {
             Playa.speed = powerUp.maxSpeed;
+        }
+        if(Playa.reloadTimer >= powerUp.maxReloadTimer)
+        {
+          Playa.reloadTimer = powerUp.maxReloadTimer;
+        }
+        if(Playa._jumpForce >= powerUp.maxJumpForce)
+        {
+            Playa._jumpForce = powerUp.maxJumpForce;
         }
         //if(powerUp.powerMultiplier != 1)
         //{
