@@ -23,6 +23,9 @@ public class PlayerMovement : MonoBehaviour
     public Camera mainCamera;
     public int health = 0;
 
+    [HideInInspector] public bool isDead;
+    [SerializeField] private ParticleSystem deathEffect;
+
     [SerializeField] float reloadTimer = 0.5f;
 
     [SerializeField] private GameObject spawn;
@@ -40,6 +43,7 @@ public class PlayerMovement : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         _anim = GetComponent<Animator>();
+        isDead = false;
     }
 
     public void Move(InputAction.CallbackContext ctx)
@@ -64,9 +68,15 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
- if (movementInput.x == 0)
+        if (movementInput.x == 0)
         {
             _anim.SetBool("isMoving", false);
+        }
+
+        if (isDead)
+        { 
+            Instantiate(deathEffect, transform.position, Quaternion.identity);
+            Destroy(gameObject);
         }
     }
 

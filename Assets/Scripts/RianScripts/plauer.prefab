@@ -142,7 +142,6 @@ MonoBehaviour:
   damage: 0
   gun: {fileID: 1583528614470893088}
   weight: 1
-  anim: {fileID: 0}
   speed: 6.7
   offset: {x: 0, y: -0.67, z: 0}
   boxsize: {x: 0.72, y: 0.05}
@@ -151,6 +150,8 @@ MonoBehaviour:
   projectilePrefab: {fileID: 1370411557751180021, guid: b0a9f9c834b99004cb5015548c2c2479, type: 3}
   mainCamera: {fileID: 0}
   health: 0
+  isDead: 0
+  deathEffect: {fileID: 5899855994684877375, guid: 0215dcbb99da1964f8deceecab1339a7, type: 3}
   reloadTimer: 0.5
   spawn: {fileID: 7725585988557925610}
   reloaded: 1
