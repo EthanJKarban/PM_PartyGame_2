@@ -10,7 +10,6 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private float damage;
     [SerializeField] private GameObject gun;
-    [SerializeField] public bool isDead = false;
 
     public float weight = 1;
 
@@ -24,25 +23,34 @@ public class PlayerMovement : MonoBehaviour
     public Camera mainCamera;
     public int health = 0;
 
-    [SerializeField] public float reloadTimer = 0.5f;
+    [HideInInspector] public bool isDead;
+    [SerializeField] private ParticleSystem deathEffect;
+
+    [SerializeField] float reloadTimer = 0.5f;
 
     [SerializeField] private GameObject spawn;
 
     public bool reloaded = true;
 
-    [SerializeField] public float _jumpForce = 15f;
+    [SerializeField] private float _jumpForce = 15f;
     private bool jumped = false;
     [SerializeField] private LayerMask _groundLayer;
+
+    private Animator _anim;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        _anim = GetComponent<Animator>();
+        isDead = false;
     }
 
     public void Move(InputAction.CallbackContext ctx)
     {
-        movementInput = ctx.ReadValue<Vector2>(); 
+        movementInput = ctx.ReadValue<Vector2>();
+        _anim.SetBool("isMoving",true);
+        
     }
     public bool IsGrounded()
     {
@@ -58,7 +66,15 @@ public class PlayerMovement : MonoBehaviour
         }
     }
     // Update is called once per frame
-  
+    private void Update()
+    {
+
+        if (isDead)
+        { 
+            Instantiate(deathEffect, transform.position, Quaternion.identity);
+            Destroy(gameObject);
+        }
+    }
 
     private void OnDrawGizmos()
     {
