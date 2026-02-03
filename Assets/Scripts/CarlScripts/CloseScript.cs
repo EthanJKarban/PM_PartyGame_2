@@ -1,15 +1,11 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.UI;
 
 public class CloseScript : MonoBehaviour
 {
     public string sceneToQuitOn = "Quit";
-    public float quitDelay = 0.5f;
-
-    public Vector3 startSize;
-    public Vector3 endSize;
+    public float quitDelay = 1f;
 
     void Start()
     {
@@ -21,18 +17,12 @@ public class CloseScript : MonoBehaviour
 
     IEnumerator QuitGameAfterDelay(float delay)
     {
-        for (float t = 0; t < 1; t += Time.deltaTime)
-        {
-            transform.localScale = Vector3.Lerp(startSize, endSize, t);
-            yield return new WaitForEndOfFrame();
-        }
-
         yield return new WaitForSeconds(delay);
 
         QuitGame();
     }
 
-    void QuitGame()
+    public void QuitGame()
     {
         Debug.Log("Quitting application...");
 
@@ -43,4 +33,3 @@ public class CloseScript : MonoBehaviour
 #endif
     }
 }
-
