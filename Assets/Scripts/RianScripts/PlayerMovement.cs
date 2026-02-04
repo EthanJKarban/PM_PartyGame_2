@@ -7,7 +7,7 @@ using System.Collections;
 public class PlayerMovement : MonoBehaviour
 
 {
-    [SerializeField] private Rigidbody2D rb;
+    [SerializeField] public Rigidbody2D rb;
     [SerializeField] private float damage;
     [SerializeField] private GameObject gun;
     [HideInInspector] public bool isDead = false;
@@ -27,7 +27,7 @@ public class PlayerMovement : MonoBehaviour
     public int health = 0;
 
 
-
+    
 
     [SerializeField] public float reloadTimer = 0.5f;
 
