@@ -3,7 +3,7 @@ using UnityEngine.SceneManagement;
 
 public class BlackScreen : MonoBehaviour
 {
-    public float delayBeforeLoad = 5f;
+    public float delayBeforeLoad = 3f;
 
     void Start()
     {
