@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
+guid: 4fc39c11bd8290040b2a1456bdede0b6
+=======
 guid: af38ac671af5ce6479e62917ef8d2ee9
+>>>>>>> 45101eb699be95bafe6ae18c9ac1e40bd00f03d6
 TextureImporter:
   internalIDToNameTable:
   - first:
@@ -37,7 +41,11 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
+<<<<<<< HEAD
+    filterMode: 0
+=======
     filterMode: 1
+>>>>>>> 45101eb699be95bafe6ae18c9ac1e40bd00f03d6
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -75,7 +83,11 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
+<<<<<<< HEAD
+    textureCompression: 0
+=======
     textureCompression: 1
+>>>>>>> 45101eb699be95bafe6ae18c9ac1e40bd00f03d6
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -160,8 +172,17 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
+<<<<<<< HEAD
     nameFileIdTable:
       arm_0: 3015177024873187116
+=======
+<<<<<<< HEAD
+    nameFileIdTable:
+      arm_0: 3015177024873187116
+=======
+    nameFileIdTable: {}
+>>>>>>> 45101eb699be95bafe6ae18c9ac1e40bd00f03d6
+>>>>>>> 5bd13495680ac87af6018e9c1b0121b1b03cf49f
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
