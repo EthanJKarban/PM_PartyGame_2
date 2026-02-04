@@ -3,7 +3,7 @@ using UnityEngine;
 public class OutOfBounds : MonoBehaviour
 {
 
-    public PlayerMovement _player;
+    private PlayerMovement _player;
 
 
 
@@ -18,6 +18,7 @@ public class OutOfBounds : MonoBehaviour
         Debug.Log("Out of bounds! Destroying player.");
         collision.gameObject.CompareTag("Player");
         _player = collision.gameObject.GetComponent<PlayerMovement>();
+        Debug.Log("Player found, setting isDead to true.");
         _player.isDead = true;
         
     }

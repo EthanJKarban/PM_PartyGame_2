@@ -180,14 +180,9 @@ TextureImporter:
     nameFileIdTable:
       arm_0: 3015177024873187116
 =======
-<<<<<<< HEAD
-    nameFileIdTable:
-      arm_0: 3015177024873187116
-=======
     nameFileIdTable: {}
 >>>>>>> 45101eb699be95bafe6ae18c9ac1e40bd00f03d6
 >>>>>>> 5bd13495680ac87af6018e9c1b0121b1b03cf49f
->>>>>>> 826cdfb982ffd30ee2fdadc475173f7683ff245a
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
