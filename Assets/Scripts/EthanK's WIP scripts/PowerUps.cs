@@ -3,6 +3,8 @@ using UnityEngine;
 
 public class PowerUps : MonoBehaviour
 {
+    [SerializeField] public float selfDestroyTime = 10f;
+    [SerializeField] public float countdown;
     public PU powerUp;
     //public PS playerStats;
     public PlayerMovement Playa;
@@ -22,6 +24,15 @@ public class PowerUps : MonoBehaviour
         }
     }
 
+    private void Update()
+    {
+        countdown += Time.deltaTime;
+        if(countdown >= selfDestroyTime)
+        {
+            Destroy(gameObject);
+        }
+    }
+
     IEnumerator Pickup(Collider2D player)
     {
         //Instantiate(pickupEffect, transform.position, transform.rotation);
@@ -38,6 +49,7 @@ public class PowerUps : MonoBehaviour
         if(powerUp.isAHeal == true)
         {
             // This then would heal
+            Playa.health += powerUp.healAmount;
         }
         if(powerUp.isAAbility == true)
         {
@@ -53,13 +65,17 @@ public class PowerUps : MonoBehaviour
         {
             Playa.speed = powerUp.maxSpeed;
         }
-        if(Playa.reloadTimer >= powerUp.maxReloadTimer)
+        if(Playa.reloadTimer <= powerUp.maxReloadTimer)
         {
           Playa.reloadTimer = powerUp.maxReloadTimer;
         }
         if(Playa._jumpForce >= powerUp.maxJumpForce)
         {
             Playa._jumpForce = powerUp.maxJumpForce;
+        }
+        if(Playa.health <= powerUp.minimumHealth)
+        {
+            Playa.health = powerUp.minimumHealth;
         }
         //if(powerUp.powerMultiplier != 1)
         //{

@@ -10,19 +10,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6d8048f1a7eea5d4faf18f65f70e366e, type: 3}
-  m_Name: BuffTest
+  m_Name: ReloadLoVania
   m_EditorClassIdentifier: 
   buffDuration: 1
-  speedMultiplier: 1.2
+  speedMultiplier: 1
   powerMultiplier: 1
   defenseMultiplier: 1
   jumpForceMultiplier: 1
-  ReloadcooldownMultiplier: 1
+  ReloadcooldownMultiplier: 1.2
   healAmount: 0
   isABuff: 1
   isAHeal: 0
   isAAbility: 0
   maxSpeed: 13.4
-  maxReloadTimer: 0
+  maxReloadTimer: 0.25
   maxJumpForce: 30
   minimumHealth: -10
