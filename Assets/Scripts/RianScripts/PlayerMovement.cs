@@ -10,7 +10,9 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private float damage;
     [SerializeField] private GameObject gun;
-    [SerializeField] public bool isDead = false;
+    [HideInInspector] public bool isDead = false;
+
+    [SerializeField] private ParticleSystem dieParticles;
 
     public float weight = 1;
 
@@ -23,6 +25,9 @@ public class PlayerMovement : MonoBehaviour
     public GameObject projectilePrefab;
     public Camera mainCamera;
     public int health = 0;
+
+
+
 
     [SerializeField] public float reloadTimer = 0.5f;
 
@@ -76,6 +81,13 @@ public class PlayerMovement : MonoBehaviour
         {
             rb.linearVelocityY = _jumpForce;
             jumped = false;
+        }
+
+        // what happens when you die
+        if (isDead)
+        {
+            Instantiate(dieParticles, transform.position, Quaternion.identity);
+            Destroy(gameObject);
         }
     }
 
