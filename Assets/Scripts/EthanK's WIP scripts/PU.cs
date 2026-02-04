@@ -12,7 +12,7 @@ public class PU : ScriptableObject
     [SerializeField] public float defenseMultiplier = 1f;
     [SerializeField] public float jumpForceMultiplier = 1.1f;
     [SerializeField] public float ReloadcooldownMultiplier = 1.2f;
-    [SerializeField] public float healAmount;
+    [SerializeField] public int healAmount;
     [SerializeField] public bool isABuff = true;
     [SerializeField] public bool isAHeal;
     [SerializeField] public bool isAAbility;
@@ -20,6 +20,8 @@ public class PU : ScriptableObject
     [SerializeField] public float maxReloadTimer = 0.25f;
     [SerializeField] public float maxJumpForce = 30f;
     
+    [SerializeField] public int minimumHealth = -10;
+
 
 
 

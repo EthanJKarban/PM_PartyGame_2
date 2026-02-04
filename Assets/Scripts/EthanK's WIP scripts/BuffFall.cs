@@ -16,16 +16,17 @@ public class BuffFall : MonoBehaviour
         
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Ground"))
         {
            
            if(rb != null)
            {
-                
+                Debug.Log("AAAAAAAAAAAAAAAA");
                 rb.linearVelocity = Vector2.zero;
                 rb.bodyType = RigidbodyType2D.Kinematic;
+                rb.constraints = RigidbodyConstraints2D.FreezeAll;
            }
         }
     }

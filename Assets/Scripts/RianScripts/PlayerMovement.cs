@@ -7,7 +7,7 @@ using System.Collections;
 public class PlayerMovement : MonoBehaviour
 
 {
-    [SerializeField] private Rigidbody2D rb;
+    [SerializeField] public Rigidbody2D rb;
     [SerializeField] private float damage;
     [SerializeField] private GameObject gun;
     [HideInInspector] public bool isDead = false;
@@ -26,9 +26,9 @@ public class PlayerMovement : MonoBehaviour
     public Camera mainCamera;
     public int health = 0;
 
-
-
-
+    public AudioSource source;
+    public AudioClip clip1, clip2;
+  
     [SerializeField] public float reloadTimer = 0.5f;
 
     [SerializeField] private GameObject spawn;
@@ -79,6 +79,7 @@ public class PlayerMovement : MonoBehaviour
         // Apply velocity in the FixedUpdate for consistent physics interactions (FixedUpdate is called at a fixed interval)
         if (jumped)
         {
+            
             rb.linearVelocityY = _jumpForce;
             jumped = false;
         }
@@ -111,6 +112,7 @@ public class PlayerMovement : MonoBehaviour
        
         if (context.performed && reloaded)
         {
+            AudioSource.PlayClipAtPoint(clip1, Vector2.zero);
             GameObject proj = Instantiate(projectilePrefab, spawn.transform.position, Quaternion.identity);
             proj.transform.right = gun.transform.right;
             reloaded = false;
@@ -139,7 +141,7 @@ public class PlayerMovement : MonoBehaviour
             if (IsGrounded())
             {
                 rb.linearVelocityY = _jumpForce;
-                
+                AudioSource.PlayClipAtPoint(clip2, Vector2.zero);
             }
             if (!IsGrounded())
             {
