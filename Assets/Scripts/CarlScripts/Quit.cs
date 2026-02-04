@@ -5,7 +5,7 @@ public class Quit : MonoBehaviour
 {
     public void OnQuitButtonClick()
     {
-        SceneManager.LoadScene("Quit");
+        SceneManager.LoadScene("BlackScreen");
     }
 
 }
