@@ -10,6 +10,9 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private float damage;
     [SerializeField] private GameObject gun;
+    [HideInInspector] public bool isDead = false;
+
+    [SerializeField] private ParticleSystem dieParticles;
 
     public float weight = 1;
 
@@ -23,17 +26,18 @@ public class PlayerMovement : MonoBehaviour
     public Camera mainCamera;
     public int health = 0;
 
-    [SerializeField] float reloadTimer = 0.5f;
+
+
+
+    [SerializeField] public float reloadTimer = 0.5f;
 
     [SerializeField] private GameObject spawn;
 
     public bool reloaded = true;
 
-    [SerializeField] private float _jumpForce = 15f;
+    [SerializeField] public float _jumpForce = 15f;
     private bool jumped = false;
     [SerializeField] private LayerMask _groundLayer;
-
-
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -43,9 +47,7 @@ public class PlayerMovement : MonoBehaviour
 
     public void Move(InputAction.CallbackContext ctx)
     {
-        movementInput = ctx.ReadValue<Vector2>();
-   
-        
+        movementInput = ctx.ReadValue<Vector2>(); 
     }
     public bool IsGrounded()
     {
@@ -61,7 +63,7 @@ public class PlayerMovement : MonoBehaviour
         }
     }
     // Update is called once per frame
- 
+  
 
     private void OnDrawGizmos()
     {
@@ -79,6 +81,13 @@ public class PlayerMovement : MonoBehaviour
         {
             rb.linearVelocityY = _jumpForce;
             jumped = false;
+        }
+
+        // what happens when you die
+        if (isDead)
+        {
+            Instantiate(dieParticles, transform.position, Quaternion.identity);
+            Destroy(gameObject);
         }
     }
 

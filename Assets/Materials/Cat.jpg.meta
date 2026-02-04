@@ -1,14 +1,10 @@
 fileFormatVersion: 2
-<<<<<<< HEAD
-guid: 4fc39c11bd8290040b2a1456bdede0b6
-=======
-guid: af38ac671af5ce6479e62917ef8d2ee9
->>>>>>> 45101eb699be95bafe6ae18c9ac1e40bd00f03d6
+guid: 522c5c6e7e7a64442b202bd8fa672f32
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3015177024873187116
-    second: arm_0
+      213: -7232521027535748977
+    second: Cat_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -41,11 +37,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-<<<<<<< HEAD
-    filterMode: 0
-=======
     filterMode: 1
->>>>>>> 45101eb699be95bafe6ae18c9ac1e40bd00f03d6
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -83,11 +75,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-<<<<<<< HEAD
-    textureCompression: 0
-=======
     textureCompression: 1
->>>>>>> 45101eb699be95bafe6ae18c9ac1e40bd00f03d6
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -138,13 +126,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: arm_0
+      name: Cat_0
       rect:
         serializedVersion: 2
-        x: 5
-        y: 47
-        width: 110
-        height: 56
+        x: 0
+        y: 0
+        width: 115
+        height: 180
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -153,8 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c274c7e678f08d920800000000000000
-      internalID: 3015177024873187116
+      spriteID: f80403be17ce0ab90800000000000000
+      internalID: -7232521027535748977
       vertices: []
       indices: 
       edges: []
@@ -172,12 +160,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-<<<<<<< HEAD
     nameFileIdTable:
-      arm_0: 3015177024873187116
-=======
-    nameFileIdTable: {}
->>>>>>> 45101eb699be95bafe6ae18c9ac1e40bd00f03d6
+      Cat_0: -7232521027535748977
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

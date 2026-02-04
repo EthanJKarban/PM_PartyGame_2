@@ -1,9 +1,9 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class LevelLoading : MonoBehaviour
+public class BlackScreen : MonoBehaviour
 {
-    public float delayBeforeLoad = 10f;
+    public float delayBeforeLoad = 5f;
 
     void Start()
     {
@@ -12,6 +12,6 @@ public class LevelLoading : MonoBehaviour
 
     private void LoadNextScene()
     {
-        SceneManager.LoadScene("Rian test");
+        SceneManager.LoadScene("Quit");
     }
 }

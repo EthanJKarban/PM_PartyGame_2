@@ -36,8 +36,16 @@ AnimatorStateMachine:
   m_Name: Base Layer
   m_ChildStates:
   - serializedVersion: 1
+<<<<<<< HEAD
     m_State: {fileID: -6613683229659508558}
     m_Position: {x: 390, y: 120, z: 0}
+=======
+    m_State: {fileID: -6217399370747414888}
+    m_Position: {x: 360, y: 100, z: 0}
+  - serializedVersion: 1
+    m_State: {fileID: -8586705504382599484}
+    m_Position: {x: 540, y: 290, z: 0}
+>>>>>>> 45101eb699be95bafe6ae18c9ac1e40bd00f03d6
   m_ChildStateMachines: []
   m_AnyStateTransitions:
   - {fileID: 441546593342560591}
