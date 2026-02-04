@@ -11,47 +11,17 @@ public class PlayerColor : MonoBehaviour
 
     [SerializeField] private List<Color> playerColors = new List<Color>();
 
-
     private void Awake()
     {
         playerInput = GetComponent<PlayerInput>();
-        // Replace the GetComponentInChildren line with this:
         playerRenderer = GetComponent<SpriteRenderer>();
 
-
-            if (playerRenderer == null)
+        if (playerRenderer == null)
         {
             Debug.LogError("Player prefab needs a Renderer component!");
         }
 
-        Color color = new Color();
-        switch (playerInput.user.index)
-        {
-            case 0:
-                color = playerColors[0];
-                break;
-
-            case 1:
-                color = playerColors[1];
-
-                break;
-
-            case 2:
-                color = playerColors[2];
-                break;
-
-            case 3:
-                color = playerColors[3];
-                break;
-        }
-        color.a = 1f;
-        playerRenderer.color = color;
-    }
-    private void Start()
-    {
-        playerInput = GetComponent<PlayerInput>();
-
-        // Find "pivot", then find "g u n" inside it
+        // Find the gun renderer (pivot -> gun) so we can color it too
         Transform pivotTransform = transform.Find("pivot");
         if (pivotTransform != null)
         {
@@ -59,7 +29,37 @@ public class PlayerColor : MonoBehaviour
             if (gunTransform != null)
             {
                 gunRenderer = gunTransform.GetComponent<SpriteRenderer>();
+                if (gunRenderer == null)
+                    Debug.LogWarning("Found 'gun' but it has no SpriteRenderer.");
             }
         }
+
+        Color color = new Color();
+        int idx = 0;
+        if (playerInput != null && playerInput.user != null)
+            idx = playerInput.user.index;
+
+        switch (idx)
+        {
+            case 0:
+                color = playerColors[0];
+                break;
+            case 1:
+                color = playerColors[1];
+                break;
+            case 2:
+                color = playerColors[2];
+                break;
+            case 3:
+                color = playerColors[3];
+                break;
+        }
+        color.a = 1f;
+
+        if (playerRenderer != null)
+            playerRenderer.color = color;
+
+        if (gunRenderer != null)
+            gunRenderer.color = color;
     }
 }

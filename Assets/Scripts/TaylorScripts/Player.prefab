@@ -142,6 +142,7 @@ MonoBehaviour:
   damage: 0
   gun: {fileID: 1583528614470893088}
   isDead: 0
+  dieParticles: {fileID: 0}
   weight: 1
   speed: 6.7
   offset: {x: 0, y: -0.67, z: 0}
@@ -151,7 +152,7 @@ MonoBehaviour:
   projectilePrefab: {fileID: 1370411557751180021, guid: b0a9f9c834b99004cb5015548c2c2479, type: 3}
   mainCamera: {fileID: 0}
   health: 0
-  reloadTimer: 0.1
+  reloadTimer: 0.5
   spawn: {fileID: 7725585988557925610}
   reloaded: 1
   _jumpForce: 15
@@ -513,12 +514,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 3015177024873187116, guid: af38ac671af5ce6479e62917ef8d2ee9, type: 3}
+  m_Sprite: {fileID: 837957619607344398, guid: 25537f0b1678bc3408fea80717307553, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1.1, y: 0.56}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -563,7 +564,7 @@ BoxCollider2D:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 1.1, y: 0.56}
-    newSize: {x: 1, y: 1}
+    newSize: {x: 1.1, y: 0.56}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
