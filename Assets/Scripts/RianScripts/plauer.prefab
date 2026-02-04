@@ -115,7 +115,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 8793639957104055765, guid: 3e2685656ad4fd640b714b3f1b3f74d0, type: 3}
+  m_Sprite: {fileID: -8190126264568729420, guid: b53f192fc8865fb4ca5140baaa731db5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -142,7 +142,6 @@ MonoBehaviour:
   damage: 0
   gun: {fileID: 1583528614470893088}
   weight: 1
-  anim: {fileID: 0}
   speed: 6.7
   offset: {x: 0, y: -0.67, z: 0}
   boxsize: {x: 0.72, y: 0.05}
@@ -350,7 +349,7 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 2810a9c5-44e5-486c-93af-b70b58cb5cb9
     m_ActionName: 'Player/Look1[/Mouse/position,/Pen/position]'
-  m_NeverAutoSwitchControlSchemes: 0
+  m_NeverAutoSwitchControlSchemes: 1
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
@@ -415,7 +414,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.6666667, y: 1.3333334}
+    oldSize: {x: 0.78, y: 1.18}
     newSize: {x: 1, y: 2}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -466,8 +465,8 @@ Transform:
   m_GameObject: {fileID: 2560692143884638367}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.9764, y: 0.1551, z: 0}
-  m_LocalScale: {x: 0.67800725, y: 0.15141702, z: 1}
+  m_LocalPosition: {x: 0.93, y: 0.079, z: 0}
+  m_LocalScale: {x: 0.74677736, y: 0.5600274, z: 1.9458}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8210547564276366149}
@@ -517,7 +516,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+  m_Sprite: {fileID: 3015177024873187116, guid: 4fc39c11bd8290040b2a1456bdede0b6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -566,7 +565,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 1.1, y: 0.56}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0

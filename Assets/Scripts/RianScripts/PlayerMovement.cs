@@ -33,19 +33,18 @@ public class PlayerMovement : MonoBehaviour
     private bool jumped = false;
     [SerializeField] private LayerMask _groundLayer;
 
-    private Animator _anim;
+
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        _anim = GetComponent<Animator>();
     }
 
     public void Move(InputAction.CallbackContext ctx)
     {
         movementInput = ctx.ReadValue<Vector2>();
-        _anim.SetBool("isMoving",true);
+   
         
     }
     public bool IsGrounded()
@@ -62,13 +61,7 @@ public class PlayerMovement : MonoBehaviour
         }
     }
     // Update is called once per frame
-    private void Update()
-    {
- if (movementInput.x == 0)
-        {
-            _anim.SetBool("isMoving", false);
-        }
-    }
+ 
 
     private void OnDrawGizmos()
     {

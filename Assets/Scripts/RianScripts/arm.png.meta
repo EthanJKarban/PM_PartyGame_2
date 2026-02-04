@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: c82344f95c7268e439515f97c14fa77a
+guid: 4fc39c11bd8290040b2a1456bdede0b6
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -678225867358449274
-    second: GoBack_0
+      213: 3015177024873187116
+    second: arm_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +37,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -75,7 +75,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -126,13 +126,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: GoBack_0
+      name: arm_0
       rect:
         serializedVersion: 2
-        x: 58
-        y: 58
-        width: 484
-        height: 484
+        x: 5
+        y: 47
+        width: 110
+        height: 56
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,8 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6815e92ca257696f0800000000000000
-      internalID: -678225867358449274
+      spriteID: c274c7e678f08d920800000000000000
+      internalID: 3015177024873187116
       vertices: []
       indices: 
       edges: []
@@ -161,7 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      GoBack_0: -678225867358449274
+      arm_0: 3015177024873187116
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
