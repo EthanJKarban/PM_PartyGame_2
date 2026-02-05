@@ -2,22 +2,25 @@ using UnityEngine;
 
 public class ui : MonoBehaviour
 {
+    public PlayerMovement player;
     public int player1;
     public int player2;
     public int player3;
     public int player4;
-    public int knockback;
-    public int firerate;
-    public int knockbackimmune;
+    public TMPro.TMP_Text jumpforcetext;
     public TMPro.TMP_Text knockbacktext;
-    public TMPro.TMP_Text fireratetext;
-    public TMPro.TMP_Text knockbackimmuntext;
+    public TMPro.TMP_Text reloadTimertext;
+    //public TMPro.TMP_Text knockbackimmuntext;
+    public TMPro.TMP_Text healthtext;
+    public TMPro.TMP_Text speedtext;
     void Update()
     {
+        
         /// Update the UI text elements with the current values
-        knockbacktext.text = "Knockback: " + knockback;
-        fireratetext.text = "Firerate: " + firerate;
-        knockbackimmuntext.text = "Knockback Immune: " + knockbackimmune;
-
+        jumpforcetext.text = "jumpforce: " + player._jumpForce;
+        reloadTimertext.text = "Firerate: " + player.reloadTimer;
+        //knockbackimmuntext.text = "Knockback Immune: " + palyer.;
+        speedtext.text = "Speed: " + player.speed;
+        healthtext.text = "Heal: " + player.health;
     }
 }
