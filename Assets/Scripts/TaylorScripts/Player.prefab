@@ -143,7 +143,7 @@ MonoBehaviour:
   damage: 0
   gun: {fileID: 1583528614470893088}
   isDead: 0
-  dieParticles: {fileID: 0}
+  dieParticles: {fileID: 5899855994684877375, guid: 0215dcbb99da1964f8deceecab1339a7, type: 3}
   weight: 1
   speed: 6.7
   offset: {x: 0, y: -0.67, z: 0}
@@ -156,7 +156,6 @@ MonoBehaviour:
   source: {fileID: 7249869432552301776}
   clip1: {fileID: 8300000, guid: 735d817435f67f64795ee34d5bc06727, type: 3}
   clip2: {fileID: 8300000, guid: d7370144a95c5c54e99b79162c391f4a, type: 3}
-  clip3: {fileID: 0}
   reloadTimer: 0.5
   spawn: {fileID: 7725585988557925610}
   reloaded: 1
