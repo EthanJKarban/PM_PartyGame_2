@@ -23,6 +23,6 @@ MonoBehaviour:
   isAHeal: 0
   isAAbility: 0
   maxSpeed: 13.4
-  maxReloadTimer: 0.25
+  maxReloadTimer: 0.02
   maxJumpForce: 30
   minimumHealth: -10
