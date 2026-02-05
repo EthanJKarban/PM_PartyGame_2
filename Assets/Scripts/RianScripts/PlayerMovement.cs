@@ -89,6 +89,7 @@ public class PlayerMovement : MonoBehaviour
         {
             Instantiate(dieParticles, transform.position, Quaternion.identity);
             Destroy(gameObject);
+            Destroy(dieParticles);
         }
     }
 
@@ -148,6 +149,7 @@ public class PlayerMovement : MonoBehaviour
                 if (HasDoubleJump == true)
                 {
                     rb.linearVelocityY = _jumpForce;
+                    AudioSource.PlayClipAtPoint(clip2, Vector2.zero);
                     HasDoubleJump = false;
                 }
             }
