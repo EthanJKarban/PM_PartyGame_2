@@ -27,7 +27,7 @@ public class PlayerMovement : MonoBehaviour
     public int health = 0;
 
     public AudioSource source;
-    public AudioClip clip1, clip2;
+    public AudioClip ShootFX, JumpFX;
   
     [SerializeField] public float reloadTimer = 0.5f;
 
@@ -113,7 +113,7 @@ public class PlayerMovement : MonoBehaviour
        
         if (context.performed && reloaded)
         {
-            AudioSource.PlayClipAtPoint(clip1, Vector2.zero);
+            AudioSource.PlayClipAtPoint(ShootFX, Vector2.zero);
             GameObject proj = Instantiate(projectilePrefab, spawn.transform.position, Quaternion.identity);
             proj.transform.right = gun.transform.right;
             reloaded = false;
@@ -142,14 +142,14 @@ public class PlayerMovement : MonoBehaviour
             if (IsGrounded())
             {
                 rb.linearVelocityY = _jumpForce;
-                AudioSource.PlayClipAtPoint(clip2, Vector2.zero);
+                AudioSource.PlayClipAtPoint(JumpFX, Vector2.zero);
             }
             if (!IsGrounded())
             {
                 if (HasDoubleJump == true)
                 {
                     rb.linearVelocityY = _jumpForce;
-                    AudioSource.PlayClipAtPoint(clip2, Vector2.zero);
+                    AudioSource.PlayClipAtPoint(JumpFX, Vector2.zero);
                     HasDoubleJump = false;
                 }
             }
