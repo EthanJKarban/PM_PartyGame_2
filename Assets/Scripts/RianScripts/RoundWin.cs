@@ -8,10 +8,13 @@ public class RoundWin : MonoBehaviour
 {
     public static int PlayersAlive = 1;
     public int WinTimer = 3;
+    private GameObject WinText;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        WinText = GameObject.FindWithTag("WinText");
+        WinText.SetActive(false);
         PlayersAlive = FindObjectsByType<PlayerInput>(FindObjectsInactive.Include, FindObjectsSortMode.None).Length;
     }
 
@@ -21,6 +24,7 @@ public class RoundWin : MonoBehaviour
         if (PlayersAlive == 1)
         {
             EndRound();
+            WinText.SetActive(true);
         }
 
     }

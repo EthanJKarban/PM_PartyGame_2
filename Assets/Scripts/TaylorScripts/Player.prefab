@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2206923375316358359}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: pivot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -49,7 +49,7 @@ GameObject:
   - component: {fileID: 6408089813993471969}
   - component: {fileID: -2643845798642752067}
   - component: {fileID: 7249869432552301776}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -153,9 +153,9 @@ MonoBehaviour:
   projectilePrefab: {fileID: 1370411557751180021, guid: b0a9f9c834b99004cb5015548c2c2479, type: 3}
   mainCamera: {fileID: 0}
   health: 0
-  source: {fileID: 7249869432552301776}
-  clip1: {fileID: 8300000, guid: 735d817435f67f64795ee34d5bc06727, type: 3}
-  clip2: {fileID: 8300000, guid: d7370144a95c5c54e99b79162c391f4a, type: 3}
+  source: {fileID: 0}
+  ShootFX: {fileID: 8300000, guid: 735d817435f67f64795ee34d5bc06727, type: 3}
+  JumpFX: {fileID: 8300000, guid: d7370144a95c5c54e99b79162c391f4a, type: 3}
   reloadTimer: 0.5
   spawn: {fileID: 7725585988557925610}
   reloaded: 1
@@ -548,7 +548,7 @@ GameObject:
   - component: {fileID: 1536510424195152902}
   - component: {fileID: 7136072818141668597}
   - component: {fileID: 661928141293215205}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: gun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -681,7 +681,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8210547564276366149}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: spawn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
