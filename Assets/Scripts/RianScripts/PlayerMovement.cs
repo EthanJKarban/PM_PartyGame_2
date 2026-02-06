@@ -25,6 +25,7 @@ public class PlayerMovement : MonoBehaviour
     public GameObject projectilePrefab;
     public Camera mainCamera;
     public int health = 0;
+    private Color playerColor;
 
     public AudioSource source;
     public AudioClip clip1, clip2;
@@ -42,6 +43,7 @@ public class PlayerMovement : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        playerColor = GetComponent<SpriteRenderer>().color;
         rb = GetComponent<Rigidbody2D>();
     }
 
@@ -115,6 +117,8 @@ public class PlayerMovement : MonoBehaviour
         {
             AudioSource.PlayClipAtPoint(clip1, Vector2.zero);
             GameObject proj = Instantiate(projectilePrefab, spawn.transform.position, Quaternion.identity);
+            proj.GetComponent<SpriteRenderer>().color = playerColor;
+
             proj.transform.right = gun.transform.right;
             reloaded = false;
             StartCoroutine(GunCooldown());
