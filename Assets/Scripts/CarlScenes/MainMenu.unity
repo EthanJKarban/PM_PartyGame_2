@@ -212,7 +212,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
@@ -1254,7 +1254,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 325440641546151924, guid: 4accd804a6a80f14e8049a4458a2af9c, type: 3}
+  m_Sprite: {fileID: 3565723524536761554, guid: f65a54dce01368a47a85ae4bc20c6386, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -1955,7 +1955,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -2521409195606705084, guid: 9dfd43a3a54e68e41b5e497562e8ee54, type: 3}
+  m_Sprite: {fileID: 3794550611322748858, guid: ba4fe76d0a23d7d40ba683e15cb957d2, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
