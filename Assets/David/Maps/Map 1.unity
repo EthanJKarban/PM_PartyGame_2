@@ -131,6 +131,50 @@ PrefabInstance:
       propertyPath: m_Name
       value: multiplayer prefab
       objectReference: {fileID: 0}
+    - target: {fileID: 1325192410967946874, guid: a61ad9cd5f98fdb43909011d1c62b8a4, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.29
+      objectReference: {fileID: 0}
+    - target: {fileID: 1325192410967946874, guid: a61ad9cd5f98fdb43909011d1c62b8a4, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.93
+      objectReference: {fileID: 0}
+    - target: {fileID: 2864252758461682445, guid: a61ad9cd5f98fdb43909011d1c62b8a4, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2864252758461682445, guid: a61ad9cd5f98fdb43909011d1c62b8a4, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7772785038114889282, guid: a61ad9cd5f98fdb43909011d1c62b8a4, type: 3}
+      propertyPath: spawnpoints.Array.data[0].x
+      value: -6.84
+      objectReference: {fileID: 0}
+    - target: {fileID: 7772785038114889282, guid: a61ad9cd5f98fdb43909011d1c62b8a4, type: 3}
+      propertyPath: spawnpoints.Array.data[0].y
+      value: 1.18
+      objectReference: {fileID: 0}
+    - target: {fileID: 7772785038114889282, guid: a61ad9cd5f98fdb43909011d1c62b8a4, type: 3}
+      propertyPath: spawnpoints.Array.data[1].x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7772785038114889282, guid: a61ad9cd5f98fdb43909011d1c62b8a4, type: 3}
+      propertyPath: spawnpoints.Array.data[1].y
+      value: -2.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7772785038114889282, guid: a61ad9cd5f98fdb43909011d1c62b8a4, type: 3}
+      propertyPath: spawnpoints.Array.data[2].x
+      value: 6.84
+      objectReference: {fileID: 0}
+    - target: {fileID: 7772785038114889282, guid: a61ad9cd5f98fdb43909011d1c62b8a4, type: 3}
+      propertyPath: spawnpoints.Array.data[2].y
+      value: 1.18
+      objectReference: {fileID: 0}
+    - target: {fileID: 7772785038114889282, guid: a61ad9cd5f98fdb43909011d1c62b8a4, type: 3}
+      propertyPath: spawnpoints.Array.data[3].y
+      value: 2.8
+      objectReference: {fileID: 0}
     - target: {fileID: 7927415388015834131, guid: a61ad9cd5f98fdb43909011d1c62b8a4, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
