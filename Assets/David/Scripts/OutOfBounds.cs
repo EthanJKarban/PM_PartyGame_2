@@ -20,6 +20,7 @@ public class OutOfBounds : MonoBehaviour
         _player = collision.gameObject.GetComponent<PlayerMovement>();
         Debug.Log("Player found, setting isDead to true.");
         _player.isDead = true;
+        RoundWin.PlayersAlive--;
         
     }
         

@@ -11,6 +11,7 @@ public class uimanger : MonoBehaviour
     {
         players.Add(input.gameObject);
         uis[input.playerIndex].SetActive(true);
+        uis[input.playerIndex].GetComponent<ui>().player = input.gameObject.GetComponent<PlayerMovement>();
     }
 
     public void leave(PlayerInput input)
