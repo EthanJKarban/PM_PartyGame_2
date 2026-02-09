@@ -7,13 +7,14 @@ using System.Collections;
 public class PlayerMovement : MonoBehaviour
 
 {
-    [SerializeField] private Rigidbody2D rb;
+    [SerializeField] public Rigidbody2D rb;
     [SerializeField] private float damage;
     [SerializeField] private GameObject gun;
+    [HideInInspector] public bool isDead = false;
+
+    [SerializeField] private ParticleSystem dieParticles;
 
     public float weight = 1;
-
-    [SerializeField] private Animator anim;
 
     public float speed = 5f;
     public Vector3 offset;
@@ -23,28 +24,32 @@ public class PlayerMovement : MonoBehaviour
     public bool HasDoubleJump = true;
     public GameObject projectilePrefab;
     public Camera mainCamera;
+    public int health = 0;
+    private Color playerColor;
 
-    [SerializeField] float reloadTimer = 0.5f;
+    public AudioSource source;
+    public AudioClip ShootFX, JumpFX;
+  
+    [SerializeField] public float reloadTimer = 0.5f;
 
     [SerializeField] private GameObject spawn;
 
     public bool reloaded = true;
 
-    [SerializeField] private float _jumpForce = 15f;
+    [SerializeField] public float _jumpForce = 15f;
     private bool jumped = false;
     [SerializeField] private LayerMask _groundLayer;
-
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        playerColor = GetComponent<SpriteRenderer>().color;
         rb = GetComponent<Rigidbody2D>();
     }
 
     public void Move(InputAction.CallbackContext ctx)
     {
-        movementInput = ctx.ReadValue<Vector2>();
-        
+        movementInput = ctx.ReadValue<Vector2>(); 
     }
     public bool IsGrounded()
     {
@@ -60,9 +65,7 @@ public class PlayerMovement : MonoBehaviour
         }
     }
     // Update is called once per frame
-    private void Update()
-    {
-    }
+  
 
     private void OnDrawGizmos()
     {
@@ -78,8 +81,17 @@ public class PlayerMovement : MonoBehaviour
         // Apply velocity in the FixedUpdate for consistent physics interactions (FixedUpdate is called at a fixed interval)
         if (jumped)
         {
+            
             rb.linearVelocityY = _jumpForce;
             jumped = false;
+        }
+
+        // what happens when you die
+        if (isDead)
+        {
+            Instantiate(dieParticles, transform.position, Quaternion.identity);
+            Destroy(gameObject);
+            Destroy(dieParticles);
         }
     }
 
@@ -103,7 +115,10 @@ public class PlayerMovement : MonoBehaviour
        
         if (context.performed && reloaded)
         {
+            AudioSource.PlayClipAtPoint(ShootFX, Vector2.zero);
             GameObject proj = Instantiate(projectilePrefab, spawn.transform.position, Quaternion.identity);
+            proj.GetComponent<SpriteRenderer>().color = playerColor;
+
             proj.transform.right = gun.transform.right;
             reloaded = false;
             StartCoroutine(GunCooldown());
@@ -131,13 +146,14 @@ public class PlayerMovement : MonoBehaviour
             if (IsGrounded())
             {
                 rb.linearVelocityY = _jumpForce;
-                
+                AudioSource.PlayClipAtPoint(JumpFX, Vector2.zero);
             }
             if (!IsGrounded())
             {
                 if (HasDoubleJump == true)
                 {
                     rb.linearVelocityY = _jumpForce;
+                    AudioSource.PlayClipAtPoint(JumpFX, Vector2.zero);
                     HasDoubleJump = false;
                 }
             }

@@ -1,5 +1,6 @@
 using JetBrains.Annotations;
 using System.Collections;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Rendering;
 
@@ -43,21 +44,28 @@ public class Projectiles1 : MonoBehaviour
 
         if (collision.gameObject.CompareTag("Player"))
         {
-
             Destroy(gameObject);
+            PlayerMovement playerMovement = collision.gameObject.GetComponent<PlayerMovement>();
+            playerMovement.health += 2;
+            knockback -= playerMovement.health;
             Knockback(collision);
+            Debug.Log($"Knockback: {knockback} --- Health: {playerMovement.health}");
         }
     }
 
     void Knockback(Collider2D collision)
     {
+        
 
         Vector3 point = collision.ClosestPoint(transform.position);
         Vector2 difference = (transform.position - point).normalized;
 
         Vector2 launchangle = difference * knockback;
 
+
+
         collision.attachedRigidbody.linearVelocity = launchangle;
+        
 
         if (collision.TryGetComponent(out Player player))
         {

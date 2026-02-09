@@ -2,38 +2,25 @@ using UnityEngine;
 
 public class ui : MonoBehaviour
 {
-    public bool knockback;
-    public bool firerate;
-    public bool knockbackimmune;
-    public GameObject[] players = new GameObject[4];
-
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-
-        Canvas.ForceUpdateCanvases();
-    }
-
-    // Update is called once per frame
+    public PlayerMovement player;
+    public int player1;
+    public int player2;
+    public int player3;
+    public int player4;
+    public TMPro.TMP_Text jumpforcetext;
+    public TMPro.TMP_Text knockbacktext;
+    public TMPro.TMP_Text reloadTimertext;
+    //public TMPro.TMP_Text knockbackimmuntext;
+    public TMPro.TMP_Text healthtext;
+    public TMPro.TMP_Text speedtext;
     void Update()
     {
-        if (players.Length < 4) 
-            { 
-            if (players[0] == null) {
-                players[0] = GameObject.Find("player1");
-            }
-            if (players[1] == null)
-            {
-                players[1] = GameObject.Find("player2");
-            }
-            if (players[2] == null)
-            {
-                players[2] = GameObject.Find("player3");
-            }
-            if (players[3] == null)
-            {
-                players[3] = GameObject.Find("player4");
-            }
-        }
+        
+        /// Update the UI text elements with the current values
+        jumpforcetext.text = "jumpforce: " + player._jumpForce;
+        reloadTimertext.text = "Firerate: " + player.reloadTimer;
+        //knockbackimmuntext.text = "Knockback Immune: " + palyer.;
+        speedtext.text = "Speed: " + player.speed;
+        healthtext.text = "Heal: " + player.health;
     }
 }
