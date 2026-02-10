@@ -14944,15 +14944,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2851826294660077506, guid: 76db198b3ce93b945acf46325fdc62c2, type: 3}
       propertyPath: spawnRange
-      value: 20.31
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 2851826294660077506, guid: 76db198b3ce93b945acf46325fdc62c2, type: 3}
       propertyPath: SpawnHeight
-      value: 16.98
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 2851826294660077506, guid: 76db198b3ce93b945acf46325fdc62c2, type: 3}
       propertyPath: maxSpawnInterval
-      value: 2
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 2851826294660077506, guid: 76db198b3ce93b945acf46325fdc62c2, type: 3}
       propertyPath: minSpawnInterval

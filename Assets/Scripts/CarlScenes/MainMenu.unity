@@ -153,7 +153,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 510}
+  m_AnchoredPosition: {x: 0, y: 168}
   m_SizeDelta: {x: 450, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &171280841
@@ -659,8 +659,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -100}
-  m_SizeDelta: {x: 170, y: 70}
+  m_AnchoredPosition: {x: -0.0000038147, y: -158}
+  m_SizeDelta: {x: 111.2603, y: 41.4693}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &637232660
 MonoBehaviour:
@@ -707,8 +707,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 637232663}
-        m_TargetAssemblyTypeName: Quit, Assembly-CSharp
-        m_MethodName: OnQuitButtonClick
+        m_TargetAssemblyTypeName: QuitSimple, Assembly-CSharp
+        m_MethodName: QuitGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -765,7 +765,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 637232658}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2b0009a0a9ec272428a851f4784b38ad, type: 3}
+  m_Script: {fileID: 11500000, guid: 32f73347ad9b7584bb426743ab21300d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &784313905
@@ -880,8 +880,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -330, y: 0}
-  m_SizeDelta: {x: 170, y: 70}
+  m_AnchoredPosition: {x: -176.08, y: -1.25}
+  m_SizeDelta: {x: 97.8341, y: 47.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &828014653
 MonoBehaviour:
@@ -1026,8 +1026,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 330, y: 0}
-  m_SizeDelta: {x: 170, y: 70}
+  m_AnchoredPosition: {x: 174, y: -1.875}
+  m_SizeDelta: {x: 67.6252, y: 46.25}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1298240322
 MonoBehaviour:
@@ -1172,7 +1172,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 100}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 160, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1445260425
