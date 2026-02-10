@@ -13600,15 +13600,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2851826294660077506, guid: 76db198b3ce93b945acf46325fdc62c2, type: 3}
       propertyPath: spawnRange
-      value: 20.31
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 2851826294660077506, guid: 76db198b3ce93b945acf46325fdc62c2, type: 3}
       propertyPath: SpawnHeight
-      value: 16.98
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 2851826294660077506, guid: 76db198b3ce93b945acf46325fdc62c2, type: 3}
       propertyPath: maxSpawnInterval
-      value: 2
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 2851826294660077506, guid: 76db198b3ce93b945acf46325fdc62c2, type: 3}
       propertyPath: minSpawnInterval
@@ -13616,11 +13616,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4139641446314809764, guid: 76db198b3ce93b945acf46325fdc62c2, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.14
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4139641446314809764, guid: 76db198b3ce93b945acf46325fdc62c2, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4139641446314809764, guid: 76db198b3ce93b945acf46325fdc62c2, type: 3}
       propertyPath: m_LocalPosition.z
