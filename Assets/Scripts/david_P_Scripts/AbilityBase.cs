@@ -4,19 +4,16 @@ using UnityEngine.Events;
 
 public abstract class AbilityBase : MonoBehaviour
 {
-    public class MyFloatEvent : UnityEvent<float> { }
-    public MyFloatEvent OnAbilityUse = new MyFloatEvent();
     [Header("Ability Info]")]
     public string abilityName;
     public Sprite abilityIcon;
     public float cooldownTime;
-    private bool canUse = true;
+    public bool canUse = true;
 
     public void TriggerAbility()
     {
         if (canUse)
         {
-            OnAbilityUse.Invoke(cooldownTime);
             StartCoolDown();
             Ability();
         }

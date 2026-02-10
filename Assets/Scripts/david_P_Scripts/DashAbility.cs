@@ -1,23 +1,39 @@
+using System.Collections;
+using System.Runtime.CompilerServices;
 using UnityEngine;
-using UnityEngine.InputSystem;
 
 public class DashAbility : AbilityBase
 {
-    public AbilityBase AbilityBase;
-    private Vector2 dashInput;
-
-    public void Dash(InputAction.CallbackContext ctx)
+    private bool isDashing;  
+    public float dashPower;
+    public float dashingtime;
+    public Rigidbody2D rb;
+    public TrailRenderer tr;
+    public void Awake()
     {
-        dashInput = ctx.ReadValue<Vector2>();
+        rb = GetComponent<Rigidbody2D>();
+        tr = GetComponent<TrailRenderer>();
     }
+
 
     protected override void Ability()
     {
-        
-       
-        // Implement the logic to activate the dash ability
-        Debug.Log("Dash ability activated!");
-        // You can add your dash logic here, such as increasing player speed temporarily
+        StartCoroutine(Dash());
     }
 
+    IEnumerator Dash()
+    {
+        canUse = false;
+        isDashing = true;
+        float originalGravity = rb.gravityScale;
+        rb.gravityScale = 0f;
+        rb.linearVelocity = new Vector2(transform.localScale.x * dashPower, 0f);
+        tr.emitting = true;
+        yield return new WaitForSeconds(dashingtime);
+        tr.emitting = false;
+        rb.gravityScale = originalGravity;
+        isDashing = false;
+        yield return new WaitForSeconds(cooldownTime);
+        canUse = true;
+    }
 }
