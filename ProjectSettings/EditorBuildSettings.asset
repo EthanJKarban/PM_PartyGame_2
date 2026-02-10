@@ -23,7 +23,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scripts/CarlScenes/Settings.unity
     guid: cfde65d57d5d1dd49882ccf80548925a
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scripts/CarlScenes/Tutorial.unity
     guid: 01604eddd817f354bb60c5d393945659
   - enabled: 1
