@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: c1481f22a2fec4d4ead637d9c5b4cddc
+guid: 6cc997235fa1c3f49ba41bd0094fa697
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3152663196566444261
-    second: CoverImage.png_0
+      213: -4139820891762875307
+    second: CoverImage_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +37,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -75,7 +75,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -126,7 +126,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: CoverImage.png_0
+      name: CoverImage_0
       rect:
         serializedVersion: 2
         x: 0
@@ -141,8 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b17a538b68d7f34d0800000000000000
-      internalID: -3152663196566444261
+      spriteID: 554abb825d66c86c0800000000000000
+      internalID: -4139820891762875307
       vertices: []
       indices: 
       edges: []
@@ -160,8 +160,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      CoverImage.png_0: -3152663196566444261
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
