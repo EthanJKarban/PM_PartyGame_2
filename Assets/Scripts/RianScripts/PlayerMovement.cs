@@ -45,7 +45,6 @@ public class PlayerMovement : MonoBehaviour
     {
         playerColor = GetComponent<SpriteRenderer>().color;
         rb = GetComponent<Rigidbody2D>();
-        isDead = false;
     }
 
     public void Move(InputAction.CallbackContext ctx)
@@ -93,7 +92,6 @@ public class PlayerMovement : MonoBehaviour
             Instantiate(dieParticles, transform.position, Quaternion.identity);
             Destroy(gameObject);
             Destroy(dieParticles);
-            isDead = false;
         }
     }
 
