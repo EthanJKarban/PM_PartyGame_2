@@ -13,6 +13,8 @@ public class DashAbility : AbilityBase
 
     protected override void Ability()
     {
+        
+       
         // Implement the logic to activate the dash ability
         Debug.Log("Dash ability activated!");
         // You can add your dash logic here, such as increasing player speed temporarily
