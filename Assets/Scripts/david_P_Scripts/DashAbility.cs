@@ -18,7 +18,17 @@ public class DashAbility : AbilityBase
 
     protected override void Ability()
     {
+        if (isDashing) return;
+
         StartCoroutine(Dash());
+    }
+
+    private void FixedUpdate()
+    {
+        if (isDashing)
+        {
+            return;
+        }
     }
 
     IEnumerator Dash()
