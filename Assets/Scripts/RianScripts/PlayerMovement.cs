@@ -95,9 +95,8 @@ public class PlayerMovement : MonoBehaviour
         // what happens when you die
         if (isDead)
         {
-            Instantiate(dieParticles, transform.position, Quaternion.identity);
+            ParticleSystem newParticle = Instantiate(dieParticles, transform.position, Quaternion.identity);
             Destroy(gameObject);
-            Destroy(dieParticles);
         }
     }
 
