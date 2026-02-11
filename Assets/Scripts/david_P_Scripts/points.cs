@@ -1,9 +1,6 @@
-using System.Collections.Generic;
 using TMPro;
-using Unity.VisualScripting;
-using UnityEditor;
 using UnityEngine;
-using UnityEngine.SceneManagement;
+
 
 public class points : MonoBehaviour
 {
@@ -18,7 +15,7 @@ public class points : MonoBehaviour
 
     private void Update()
     {
-        var players = FindObjectsByType<movment>(FindObjectsSortMode.None);
+        var players = FindObjectsByType<PlayerMovement>(FindObjectsSortMode.None);
 
         if (players.Length <= 1)
         {
