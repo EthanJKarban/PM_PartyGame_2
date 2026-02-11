@@ -5,7 +5,7 @@ public class CreditsGoBack : MonoBehaviour
 {
     public void OnArrowButtonClick()
     {
-        SceneManager.LoadScene("Credits");
+        SceneManager.LoadScene("MainMenu");
     }
 
 }

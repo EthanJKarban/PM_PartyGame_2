@@ -5,7 +5,7 @@ public class Credits : MonoBehaviour
 {
     public void OnCreditsButtonClick()
     {
-        SceneManager.LoadScene("Credits");
+        SceneManager.LoadScene("CarlCredits");
     }
 
 }
