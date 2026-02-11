@@ -9,41 +9,31 @@ public class DashAbility : AbilityBase
     public float dashingtime;
     public Rigidbody2D rb;
     public TrailRenderer tr;
+    public PlayerMovement playerMovement;
     public void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
         tr = GetComponent<TrailRenderer>();
+        playerMovement = GetComponent<PlayerMovement>();
     }
-
 
     protected override void Ability()
     {
-        if (isDashing) return;
-
         StartCoroutine(Dash());
-    }
-
-    private void FixedUpdate()
-    {
-        if (isDashing)
-        {
-            return;
-        }
     }
 
     IEnumerator Dash()
     {
-        canUse = false;
         isDashing = true;
         float originalGravity = rb.gravityScale;
         rb.gravityScale = 0f;
-        rb.linearVelocity = new Vector2(transform.localScale.x * dashPower, 0f);
+        playerMovement.enabled = false; // Disable player movement during dash
+        rb.linearVelocity = new Vector2(playerMovement.direction * dashPower, 0f);
         tr.emitting = true;
         yield return new WaitForSeconds(dashingtime);
+        playerMovement.enabled = true; // Re-enable player movement after dash
         tr.emitting = false;
         rb.gravityScale = originalGravity;
         isDashing = false;
-        yield return new WaitForSeconds(cooldownTime);
-        canUse = true;
     }
 }

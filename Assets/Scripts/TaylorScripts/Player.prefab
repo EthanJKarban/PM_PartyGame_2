@@ -155,6 +155,7 @@ MonoBehaviour:
   projectilePrefab: {fileID: 1370411557751180021, guid: b0a9f9c834b99004cb5015548c2c2479, type: 3}
   mainCamera: {fileID: 0}
   health: 0
+  direction: 0
   source: {fileID: 0}
   ShootFX: {fileID: 8300000, guid: 735d817435f67f64795ee34d5bc06727, type: 3}
   JumpFX: {fileID: 8300000, guid: d7370144a95c5c54e99b79162c391f4a, type: 3}
@@ -596,7 +597,7 @@ TrailRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Time: 5
+  m_Time: 0.3
   m_PreviewTimeScale: 1
   m_Parameters:
     serializedVersion: 3
@@ -605,8 +606,8 @@ TrailRenderer:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
-        time: 0
-        value: 0.5
+        time: 0.002986908
+        value: 0.54730225
         inSlope: 0
         outSlope: 0
         tangentMode: 0
@@ -683,10 +684,11 @@ MonoBehaviour:
   abilityIcon: {fileID: 0}
   cooldownTime: 1
   canUse: 1
-  dashPower: 25
+  dashPower: 15
   dashingtime: 0.2
   rb: {fileID: 3440927217281633222}
   tr: {fileID: 7848903470740119662}
+  playerMovement: {fileID: 7670032879322732323}
 --- !u!1 &2560692143884638367
 GameObject:
   m_ObjectHideFlags: 0

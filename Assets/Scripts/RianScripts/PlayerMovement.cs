@@ -26,6 +26,7 @@ public class PlayerMovement : MonoBehaviour
     public Camera mainCamera;
     public int health = 0;
     private Color playerColor;
+    public float direction;
 
     public AudioSource source;
     public AudioClip ShootFX, JumpFX;
@@ -50,6 +51,11 @@ public class PlayerMovement : MonoBehaviour
     public void Move(InputAction.CallbackContext ctx)
     {
         movementInput = ctx.ReadValue<Vector2>(); 
+
+        if (movementInput.x != 0)
+        {
+            direction = Mathf.Sign(movementInput.x);
+        }
     }
     public bool IsGrounded()
     {
