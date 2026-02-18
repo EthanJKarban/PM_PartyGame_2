@@ -27,11 +27,11 @@ public class DashAbility : AbilityBase
         isDashing = true;
         float originalGravity = rb.gravityScale;
         rb.gravityScale = 0f;
-        playerMovement.enabled = false; // Disable player movement during dash
+        playerMovement.enabled = false;
         rb.linearVelocity = new Vector2(playerMovement.direction * dashPower, 0f);
         tr.emitting = true;
         yield return new WaitForSeconds(dashingtime);
-        playerMovement.enabled = true; // Re-enable player movement after dash
+        playerMovement.enabled = true;
         tr.emitting = false;
         rb.gravityScale = originalGravity;
         isDashing = false;

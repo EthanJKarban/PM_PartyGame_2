@@ -8,9 +8,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scripts/CarlScenes/MainMenu.unity
     guid: 51a35ed98aad2c046a52a9d87ec10a5b
-  - enabled: 0
-    path: Assets/Scripts/CarlScenes/GameLoading.unity
-    guid: 552a2245f753b0b408aa1869461fdd51
   - enabled: 1
     path: Assets/Scripts/CarlScenes/Settings.unity
     guid: da05dc6e2c2977f40a38f654c6b989f7

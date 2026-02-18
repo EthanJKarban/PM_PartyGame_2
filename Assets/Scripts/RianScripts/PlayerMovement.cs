@@ -1,8 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
-
 using System.Collections;
-
 
 public class PlayerMovement : MonoBehaviour
 
@@ -11,11 +9,9 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float damage;
     [SerializeField] private GameObject gun;
     [HideInInspector] public bool isDead = false;
-
     [SerializeField] private ParticleSystem dieParticles;
 
     public float weight = 1;
-
     public float speed = 5f;
     public Vector3 offset;
     public Vector2 boxsize;
@@ -41,7 +37,6 @@ public class PlayerMovement : MonoBehaviour
     private bool jumped = false;
     [SerializeField] private LayerMask _groundLayer;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         playerColor = GetComponent<SpriteRenderer>().color;
@@ -70,21 +65,17 @@ public class PlayerMovement : MonoBehaviour
             return false;
         }
     }
-    // Update is called once per frame
   
-
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.red;
         Gizmos.DrawWireCube(transform.position + offset + Vector3.down * castDistance, boxsize);
     }
 
-    
     void FixedUpdate()
     {
         rb.linearVelocityX = Mathf.Lerp(rb.linearVelocityX, (movementInput.x * speed), weight);
 
-        // Apply velocity in the FixedUpdate for consistent physics interactions (FixedUpdate is called at a fixed interval)
         if (jumped)
         {
             
@@ -92,7 +83,6 @@ public class PlayerMovement : MonoBehaviour
             jumped = false;
         }
 
-        // what happens when you die
         if (isDead)
         {
             ParticleSystem newParticle = Instantiate(dieParticles, transform.position, Quaternion.identity);
@@ -138,11 +128,8 @@ public class PlayerMovement : MonoBehaviour
     }
     internal void TakeKnockback(int knockback)
     {
-       //adds one knockback to the player in the inspector
        
     }
-
-
 
     public void Jump(InputAction.CallbackContext ctx)
     {
