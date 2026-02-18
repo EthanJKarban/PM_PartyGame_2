@@ -33109,7 +33109,7 @@ GameObject:
   - component: {fileID: 990583899}
   m_Layer: 3
   m_Name: mainplatform
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -37393,6 +37393,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4554614692906763452, guid: fe9ec6dcc7009e64fabbfe0b7a43c7ad, type: 3}
+      propertyPath: destination.x
+      value: -12.46
+      objectReference: {fileID: 0}
+    - target: {fileID: 4554614692906763452, guid: fe9ec6dcc7009e64fabbfe0b7a43c7ad, type: 3}
+      propertyPath: destination.y
+      value: 7.13
+      objectReference: {fileID: 0}
     - target: {fileID: 800116087813358575, guid: ad88f5842c916784185a7acc2181706d, type: 3}
       propertyPath: m_Name
       value: portal
@@ -37436,14 +37444,6 @@ PrefabInstance:
     - target: {fileID: 2774348040458851424, guid: ad88f5842c916784185a7acc2181706d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4554614692906763452, guid: fe9ec6dcc7009e64fabbfe0b7a43c7ad, type: 3}
-      propertyPath: destination.x
-      value: -12.46
-      objectReference: {fileID: 0}
-    - target: {fileID: 4554614692906763452, guid: fe9ec6dcc7009e64fabbfe0b7a43c7ad, type: 3}
-      propertyPath: destination.y
-      value: 7.13
       objectReference: {fileID: 0}
     - target: {fileID: 4554614692906763452, guid: ad88f5842c916784185a7acc2181706d, type: 3}
       propertyPath: destination.x
